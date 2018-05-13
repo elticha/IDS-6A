@@ -1,0 +1,143 @@
+=== Álgebra relacional ===
+
+Un esquema es una estructura, el esquema de la base de datos es la estructura completa.
+
+[ R1 := Q c(R2) ] {
+    //Las mayúsculas son relaciones
+    //:= Asignación de valores
+    C es una condición (similar a una sentencia IF) que se refiere a los atributos de R2
+    R1 son todas las tuplas de R2 que satisface c.
+}
+
+Relación Sell: 
+
+ [  bar  ] [ beer    ] [ price ]
+ -------------------------------
+ [ Joe's ] [ bud     ] [ 2.50  ]
+ [ Joe's ] [ Miller  ] [ 2.50  ]
+ [ SUe's ] [ bud     ] [ 2.50  ]
+
+ Prices := TT beer,price(Sells) -->
+    [  beer   ][ price ]
+    --------------------
+    [ Bud     ][ 2.50  ]
+    [ Miller  ][ 2.75  ]
+    [ Miller  ][ 3.00  ]
+
+
+=== Proyección ===
+ 
+    R1:= TT L(R2)
+
+    L es una lista de atributos del esquema de R2
+    R1 se construye buscando en cada tupla de R2, extrayendo los atributos en la lista L.
+    Se eliminan las tuplas dupplicadas, en caso de existir.
+
+=== Proyección exttendida ===
+
+Usando el mismo operador TT L, permitimos que la lista L contenga expresiones arbitrarias
+contando con atributos:
+    1.- A+B->C
+    2.- Duplica ocurrencias del mismo atributo
+
+R = ( [ A ][ B ] )
+      [ 1 ][ 2 ]
+      [ 3 ][ 4 ]
+
+TT A+B->C,A,A (R) = [ C ][ A1 ][ A2 ]
+                    [ 3 ][ 1  ][ 1  ]
+                    [ 7 ][ 3  ][ 3  ]
+
+
+=== Producto ===
+
+R3:= R1 X R2
+
+R1 = {
+    [ A ][ B ]
+    [ 1 ][ 3 ]
+    [ 2 ][ 8 ]
+}
+
+R2 = {
+    [ B ][ C ]
+    [ 5 ][ 7 ]
+    [ 9 ][ 4 ]
+}
+
+Tabla resultante = 
+
+[ A ][ R1.B ][ R2.B ][ C ]
+[ 1 ][ 3    ][ 5    ][ 7 ]
+[ 1 ][ 3    ][ 9    ][ 4 ]
+[ 2 ][ 8    ][ 5    ][ 7 ]
+[ 2 ][ 8    ][ 9    ][ 4 ]
+
+
+=== Theta-Join ===
+
+R3 := T1 |><| c(R2)
+    Toma el producto de R1 X R2
+    Luego, aplica Q c al resultado.
+
+Para la selección, c puede ser cualquier condición booleana evaluada.
+
+Ejemplo:
+Tabla Alumnos   | Tabla Ciudades
+[ id       ]    | [ id     ]
+[ Nombre   ]    | [ Nombre ]
+[ idCiudad ]    |
+
+Operacion -----> Alumnos |><|(Alumnos.idCiudad = Ciudades.id) Ciudades
+
+// Ejemplo
+
+
+Relación Sell: 
+
+ [  bar  ] [ beer    ] [ price ]
+ -------------------------------
+ [ Joe's ] [ bud     ] [ 2.50  ]
+ [ Joe's ] [ Miller  ] [ 2.75  ]
+ [ Sue's ] [ bud     ] [ 2.50  ]
+ [ Sue's ] [ Coors   ] [ 3.00  ]
+
+
+Relación Bars: 
+
+ [  name  ] [ address      ]
+ ---------------------
+ [ Joe's ] [ Maple St.     ]
+ [ Joe's ] [ River Rd      ]
+
+
+BarInfo := Sells |><| Sells.bar = Bars.name Bars
+
+=== Renombramiento ===
+
+El operador þ (ro) da un nuevo esquema a una Relación.
+
+R1 := þ R1(A1,...,An) (R2), esto hace a R1 ser una Relación con los atributos A1,...,An y las mismas
+tuplas de R2.
+
+//Ejemplo
+
+Relación Bars: 
+
+ [  name  ] [ address      ]
+ ---------------------
+ [ Joe's ] [ Maple St.     ]
+ [ Joe's ] [ River Rd      ]
+
+ R(bar,addr) := Bars
+
+R = {
+
+    [  bar  ] [ addr     ]
+    ---------------------
+    [ Joe's ] [ Maple St.]
+    [ Joe's ] [ River Rd ]
+
+}
+
+

@@ -1,0 +1,64 @@
+	Ética profesional
+
+[ Edmodo ] = 2xmwqx
+
+=== Corte 1 ===
+
+[ Generealidades de la ética ] {
+	[ Participación en clase ] -> [ 30% ],
+	[ Proyecto ] -> [ 35% ],
+	[ Actividades en clase ] -> [ 35% ]
+}
+
+=== Corte 2 ===
+
+[ Implicaciones éticas en el ámbito personal y profesional ]{
+	[ Participación en clase ] -> [ 30% ],
+	[ Proyecto ] -> [ 35% ],
+	[ Actividades en clase ] -> [ 35% ]
+}
+
+=== Corte 3 ===
+
+[ Código ético ]{
+	[ Participación en clase ] -> [ 30% ],
+	[ Proyecto ] -> [ 35% ],
+	[ Actividades en clase ] -> [ 35% ]
+}
+
+=== Proyectos ===
+
+C1.Proyecto = 22 de mayo.
+C1.Recuperación = 29 de mayo.
+C2.Proyecto = 24 de junio.
+C2.Recuperación = 3 de julio.
+C3.Proyecto = 22 de julio.
+C3.Recuperación = 31 de julio.
+
+[ TAREA ]
+
+Debe fundamentarse en las ideas de Gutiérrez Sáens
+y en las del video Sarater.
+Deberá tener una conclusión que sistematice lo previamente analizado.
+Trabajamos en clase con esa conclusión, por lo que 
+es necesario tener presente las principales ideas.
+
+
+Ideas para el mapa mental
+ ** Ética en el mundo de hoy
+ ** Estética = cosas nuevas, lo distinto, nunca visto, modas.
+ ** Ética = recordar lo que no cambia, lo que prevalece, cosas esenciales que no 	cambian.
+ La reflexión sobre aquello que es valioso para la vida.
+ La ética es la reflexión que hacemos sobre nuestra libertad.
+ La ética quiere decir cómo vivir mejor, cómo poder ser uno mismo con libertad.
+ Las supersticiones no tienen nada que ver con la ética.
+ Se miente por miedo.
+ La persona virtuosa es aquella que sabe vivir mejor.
+ La virtud se aprende de las personas que viven bien.
+ Una persona generosa es la persona a quien se recurre cuando hay un problema.
+ Se tiene una visión clara de lo que está bien y lo que está mal.
+ La moral universal  es comportarse moralmente con todo el mundo.
+ Ética y moral = Moral es el conjunto de valores que una sociedad tiene vigentes; La ética era la reflexión del por qué tenemos esos valores.
+ Ser transparente es decir la verdad, es ser rgba(255,255,255,0)
+ Hay que educar para que se despierte la moral en los seres humanos.
+ 

@@ -1,0 +1,61 @@
+El alumno será capaz de analizar sistemas de información a partir del conocimiento de los principios
+y teorías de sistemas de la infornmación.
+
+Unidades {
+	Fundamentos de análisis de sistemas,
+	Determinación de la viabilidad del proyecto,
+	Ingeniería de requerimientos,
+	Análisis de sistemas mediante diagramas de flujo de datos y diccionario de datos
+}
+
+=== Sistema y Sistema de Información ===
+Un Sistema es una serie de artefactos (componentes) que en conjunto logran algún resultado.
+
+Un sistema de información es aquel sistema que logra un resultado empresarial.
+
+Un sistema de Información recopila, manipula, almacena y crea reportes de información respecto
+a las actividades de negocio de una empresa, con el fin de ayudar a la administración de esa empresa en el manejo de las operaciones de negocios.
+
+=== Categorías ===
+Personalizado: 
+	Se desarrollan para un cliente específico, también se llaman Sistemas de Propósito Específico.
+General:
+	COTS (Comercial off-the-self), sistemas que pueden ser usados por varias empresas.
+
+=== Dominio de aplicación del software ===
+
+SF de sistemas.
+SF de aplicación.
+SF de Ingeniería y Ciencias
+SF Incrustado.
+SF de línea de Productos.
+Aplicaciones Web.
+
+=== Ciclo de Vida ===
+Representa todas las actividades y productos de  trabajo necesarios para desarrollar
+un sistema.
+
+=== Productos de trabajo ===
+
+Un PT es un artefacto que es producido durante el desarrollo.
+Se distinguen dos tipos:
+
+=== Recursos ===
+--> Participantes
+--> Tiempo
+--> Equipo
+
+
+================================================================================
+
+09/05/18
+
+[ Development ] {
+	
+		[ Requerimientos ]
+		[     Diseño     ]
+		[ Implementación ] -> { [    Codificar   ] , [ Diseñar pruebas ] }
+
+}
+
+[ Requerimientos ] -> [ Diseño ] -> [ Codificación ] -> [ Test ] -> [ Implementación ] -> [ Mantenimiento ]
