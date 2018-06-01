@@ -1,0 +1,7 @@
+Agregaciones
+
+SUM, AVG, COUNT, MIN, MAX
+
+Agregación
+--> Agrupados por atributos
+--> No agrupados (todas las tuplas)
