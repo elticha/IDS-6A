@@ -1,0 +1,57 @@
+1.- Analizar y describir que contiene cada una de las tablas:
+[attribute]->[bussinesId, name, value]
+[business]->[id,name,neighborhood, address, city, state, postal_code, latitude, longitude, stars, review, isOpen]
+[category]->[bussinesId, categoryId]
+[checkin]->[bussinesID, date, count]
+[elite_years]->[userId, friendId]
+[friend]->[userId, friendId]
+[hours]->[hours, bussinesId]
+[photo]->[id, bussinesId, caption, label]
+[review]->[id, stars, date, text, useful, funny, cool, bussinesId, userId]
+[tip]->[id, bussinesID, texto,date,likes]
+[user]->[id, name, reviewCount, yelping_since, useful, funny, cool, fans, average_stars, compliment_hot, c_profile, c_cute, c_list, c_note, c_plain, c_cool,c_funny, c_writer, c_photos]
+
+
+2.- Resolver con SQL
+
+a) Obtener por negocio las visitas por día de la semana
+
+  [SQL] {
+    select dbo.business.name, left(checkin.date,CHARINDEX('-',date)- 1) as dia, sum([count]) as cuenta_por_dia
+    from dbo.checkin inner join dbo.business on business_id = business.id
+    group by dbo.business.name, left(checkin.date,CHARINDEX('-',date)- 1);
+    order by name;
+  }
+
+b) Obtener por estado y ciudad la cantidad de negocios
+
+  [SQL]{
+    select state, city, count(*) from dbo.business
+    group by state, city
+    order by state, city
+  }
+
+c) Obtener por negocio cuantas categorías tiene asignadas
+
+  [SQL] {
+    select dbo.business.name, count (dbo.category.category) from dbo.business inner join
+    dbo.category on business.id = business_id
+    group by name
+    order by name
+  }
+
+d) Obtener la cantidad de usuarios por negocio y estado
+
+e) Obtener la cantidad de amigos de los usuarios, mostrar la información de por usuarios
+
+  [SQL] {
+    select dbo.[user].name, count(dbo.friend.friend_id) from dbo.[user]  inner join
+    dbo.friend on [user].id = dbo.friend.friend_id
+    group by name
+    order by name
+  }
+
+f) Obtener por negocio la cantidad de usuarios que llegaron como amigos de un usuario
+g) Obtener el total de negocios por estado y categoría
+h) Obtener todos los negocios que tienen menos de 50 reviews (No incluir los que tienen 0 reviews)
+i) Obtener los usuarios que frecuentan más de 4 negocios,mostrar la información por estado.
